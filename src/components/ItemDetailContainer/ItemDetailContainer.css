@@ -1,0 +1,24 @@
+.descripcion{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 310px);
+    gap: 50px;
+    justify-content: center;
+}
+.descripcion img{
+    width: 304px;
+    height: 217px;
+    object-fit: cover;
+    border-radius: 22px 22px 0 0;
+}
+.descripcion h2{
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+
+}
+.parrafo{
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 10px;
+
+}

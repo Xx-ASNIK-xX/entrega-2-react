@@ -1,4 +1,5 @@
 import ItemCount from "../ItemCount/ItemCount";
+import "./ItemDetailContainer.css";
 
 const ItemDetail = ( { producto } ) => {
 
@@ -9,11 +10,15 @@ const ItemDetail = ( { producto } ) => {
   }
 
   return (
-    <div>
-      <img src={producto.imagen} alt="" />
-      <h2>{producto.nombre}</h2>
-
-      <ItemCount stock={producto.stock} agregarAlCarrito={agregarAlCarrito} />
+    <div className="descripcion">
+        <div className="descripcion2">
+            <img src={producto.imagen} alt="" />
+        </div>
+        <div className="descripcion3">
+            <h2>{producto.nombre}</h2>
+            <p className="parrafo">{producto.descripcion}</p>
+            <ItemCount stock={producto.stock} agregarAlCarrito={agregarAlCarrito} />
+        </div>
     </div>
   );
 };
