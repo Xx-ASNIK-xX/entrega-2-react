@@ -37,14 +37,7 @@ const NavBar = () => {
         </Link>
 
       </ul>
-        {/* 
-          <div className="category">
-          <p>Acción</p>
-          <div className="img-category">
-            <GiCrossbow size={40} />
-          </div>
-        </div>
-          */}
+        {}
 
 
       <CartWidget />

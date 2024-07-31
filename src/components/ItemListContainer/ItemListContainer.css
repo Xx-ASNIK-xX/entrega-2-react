@@ -5,3 +5,37 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  .TarjetaDeCarrito{
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+    justify-content: center; 
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .card{
+    background-color: rgb(255, 255, 255);
+    margin: 30px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5%;
+    box-shadow: 0px 0px 11px 0px rgb(0 0 0 / 50%);
+    height: 350px;
+  }
+
+  .card a{
+    margin-bottom: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right:20px;
+    padding-left:20px;
+    background-color: rgb(0, 162, 255);
+    border-radius: 20px;
+  }
+  .card a:hover{
+    background-color: rgb(0, 195, 255);
+    color: azure;
+  }
+  .card:hover {
+    transform: scale(1.1);
+  }

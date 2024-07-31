@@ -2,7 +2,7 @@ const productos = [
     {
         id: "Keller1",
         nombre: "Keller Stratus 150 Full",
-        descripcion: "",
+        descripcion: "Cilindrada, 150 cc ; Transmisión, Manual 5 velocidades ; Arranque, Eléctrico y a patada.",
         precio: 2090940,
         categoria: "Calle",
         stock: 10,
@@ -11,7 +11,7 @@ const productos = [
     {
         id: "Corven1",
         nombre: "Corven Hunter 150 Base",
-        descripcion: "",
+        descripcion: "Cilindrada, 150 cc ; Freno a disco. Transmisión, Manual 5 velocidades Capacidad del tanque de 12 L.",
         precio: 1598000,
         categoria: "Calle",
         stock: 12,
@@ -20,7 +20,7 @@ const productos = [
     {
           id: "Honda1",
         nombre: "Honda GLH 150",
-        descripcion: "",
+        descripcion: "Cilindrada, 149,2 cc ; Freno a disco. Transmisión, Manual 5 velocidades e inyerccion electronica",
         precio: 3698000,
         categoria: "Calle",
         stock: 8,
@@ -29,7 +29,7 @@ const productos = [
     {
         id: "Bajaj1",
         nombre: "Bajaj Boxer 150",
-        descripcion: "",
+        descripcion: "Cilindrada, 144,8 cc ; Freno a tambor. Transmisión, Manual 5 velocidades Capacidad del tanque de 11 L.",
         precio: 2502940,
         categoria: "Calle",
         stock: 12,
