@@ -1,5 +1,5 @@
 .descripcion{
-    margin-top: 70px;
+    margin-top: 12%;
     display: grid;
     grid-template-columns: repeat(2, 310px);
     gap: 50px;
@@ -17,8 +17,10 @@
 
 }
 .parrafo2{
-    font-size: 14px;
+    font-size: 18px;
     text-align: left;
-    margin-bottom: 10px;
-
+    margin-bottom: 34px;
+    margin-top: 20px;
 }
+
+
