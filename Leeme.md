@@ -1,4 +1,4 @@
-Primera entrega de React para el curso coder Hause de parte de Nicolás Sassone
+Segunda entrega de React para el curso coder Hause de parte de Nicolás Sassone
 
 # React + Vite
 
