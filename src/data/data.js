@@ -14,7 +14,7 @@ const productos = [
       descripcion: "",
       precio: 500,
       categoria: "aventura",
-      stock: 2,
+      stock: 3,
       imagen: "/img/god.webp"
     }
   ]
