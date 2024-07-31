@@ -115,7 +115,7 @@ const productos = [
       //simulamos un retraso de red
       setTimeout(() => {
         resolve(productos)
-      }, 100);
+      }, 1000);
     });
   };
   
