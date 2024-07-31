@@ -34,8 +34,12 @@
   }
   .card a:hover{
     background-color: rgb(0, 195, 255);
-    color: azure;
+    color: rgb(0, 0, 0);
   }
   .card:hover {
     transform: scale(1.1);
+  }
+
+  .card h4{
+    color: rgb(13, 56, 112);
   }
