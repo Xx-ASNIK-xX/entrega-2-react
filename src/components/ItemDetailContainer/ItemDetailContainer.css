@@ -16,11 +16,16 @@
     margin-bottom: 10px;
 
 }
+
+.descripcion h4{
+    font-size: 20px;
+    color: rgb(13, 56, 112);
+}
+
 .parrafo2{
-    font-size: 18px;
+    font-size: 20px;
     text-align: left;
     margin-bottom: 34px;
     margin-top: 20px;
 }
-
 
