@@ -21,6 +21,7 @@ const ItemDetail = ( { producto } ) => {
             { producto.precio && (
             <h4> ${producto.precio.toLocaleString()}</h4>  /* Aquí mostramos el precio formateado */
             )}
+            
             <ItemCount stock={producto.stock} agregarAlCarrito={agregarAlCarrito} />
         </div>
     </div>
