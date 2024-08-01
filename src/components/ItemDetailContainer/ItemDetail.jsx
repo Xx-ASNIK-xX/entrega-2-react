@@ -18,9 +18,11 @@ const ItemDetail = ( { producto } ) => {
         <div className="descripcion3">
             <h2>{producto.nombre}</h2>
             <p className="parrafo2">{producto.descripcion}</p>
+
             { producto.precio && (
-            <h4> $ {producto.precio.toLocaleString()}</h4>  /* Aquí mostramos el precio formateado */
+            <h4> $ {producto.precio.toLocaleString()}</h4>  /* Aquí mostramos se formatea el precio con puntos*/
             )}
+
             <ItemCount stock={producto.stock} agregarAlCarrito={agregarAlCarrito} />
         </div>
     </div>

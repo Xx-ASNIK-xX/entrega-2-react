@@ -12,11 +12,15 @@ const ItemListContainer = ({ saludo }) => {
     obtenerProductos()
       .then((respuesta) => {
         if (idCategoria) {
-          //filtrar los productos por esa categoria recibida
+
+          //Se filtran los productos por la categoria recibida
+
           const productosFiltrados = respuesta.filter( (producto)=> producto.categoria === idCategoria)
           setProductos(productosFiltrados)
         } else {
-          //guardamos todos los productos
+
+          // En esta parte se guardan todos los productos
+          
           setProductos(respuesta);
         }
       })
