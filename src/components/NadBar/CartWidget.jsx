@@ -1,9 +1,9 @@
-import { BsBagDash } from "react-icons/bs";
+import { TbShoppingBag } from "react-icons/tb";
 
 const CartWidget = () => {
   return (
     <div className="cartwidget">
-      <BsBagDash size={35} />
+      <TbShoppingBag  size={35} />
       <p>1</p>
     </div>
   )

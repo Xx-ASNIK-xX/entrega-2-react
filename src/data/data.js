@@ -111,12 +111,12 @@ const productos = [
     
   ]
   
-  const obtenerProductos = () => {
+  const obtenerProductos = () => { 
     return new Promise((resolve, reject) => {
-      //simulamos un retraso de red
+      
       setTimeout(() => {
         resolve(productos)
-      }, 2000);
+      }, 2000);// con este numero simulamos el retraso de red
     });
   };
   
