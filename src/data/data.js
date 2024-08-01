@@ -116,7 +116,7 @@ const productos = [
       
       setTimeout(() => {
         resolve(productos)
-      }, 2000);// con este numero simulamos el retraso de red
+      }, 1000); // con este numero simulamos el retraso de red 0 servidor
     });
   };
   
