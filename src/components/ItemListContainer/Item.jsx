@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Item = ({ producto }) => {
-    // Aqui se formatear el precio con puntos como separadores de miles 1.000
+    // Aqui se formatea el precio con puntos como separadores de miles 1.000
   const precioFormateado = producto.precio.toLocaleString();
   return (
     <div className=" card"  >

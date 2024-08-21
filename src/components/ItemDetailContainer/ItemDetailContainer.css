@@ -9,7 +9,7 @@
     width: 304px;
     height: 217px;
     object-fit: cover;
-    border-radius: 22px 22px 0 0;
+    border-radius: 22px;
 }
 .descripcion h2{
     color: rgb(0, 0, 0);

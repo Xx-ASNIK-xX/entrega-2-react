@@ -1,3 +1,6 @@
+import { addDoc, collection } from "firebase/firestore"
+import db from "../db/db.js"
+
 const productos = [
     {
         id: "Keller1",
@@ -108,15 +111,14 @@ const productos = [
         imagen: "/img/moto12.jpg"
     }
     
-  ]
-  
-  const obtenerProductos = () => { 
-    return new Promise((resolve, reject) => {
-      
-      setTimeout(() => {
-        resolve(productos)
-      }, 1000); // con este numero simulamos el retraso de red 0 servidor
-    });
-  };
-  
-  export default obtenerProductos
+  ];
+
+  const seedProducts = () => {
+    productos.map (({ id, ...rest})=> {
+        const productosRef = collection (db, "productos")
+        addDoc(productosRef, rest)
+    })
+    console.log("productos subidos correctamente")
+  }
+
+  seedProducts()
