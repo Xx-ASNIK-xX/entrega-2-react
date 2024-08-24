@@ -121,4 +121,4 @@ const productos = [
     console.log("productos subidos correctamente")
   }
 
-  seedProducts()
+  seedProducts()*/

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
-import { LiaTrashAlt } from 'react-icons/lia';
+import { BiSolidTrash } from "react-icons/bi";
 import './Cart.css';
 
 const Cart = () => {
@@ -27,22 +27,22 @@ const Cart = () => {
             <img width={150} src={productoCarrito.imagen} alt="" />
             <p>{productoCarrito.nombre}</p>
             <p>Cantidad: {productoCarrito.cantidad}</p>
-            <p>Precio c/u: ${productoCarrito.precio}</p>
-            <p>Precio parcial: ${productoCarrito.cantidad * productoCarrito.precio} </p>
-            <LiaTrashAlt size={40} color="red" onClick={() => borrarProducto(productoCarrito.id)} />
+            <p>Precio c/u: $ {productoCarrito.precio.toLocaleString('es-ES')}</p>
+            <p>Precio parcial: $ {(productoCarrito.cantidad * productoCarrito.precio).toLocaleString('es-ES')}</p>
+            <BiSolidTrash className='iconoEliminarCarrito1' size={40} onClick={() => borrarProducto(productoCarrito.id)} />
           </li>
         ))}
       </ul>
 
       <div className="cart-controls">
-        <h2>Precio Total: {precioTotal()}</h2>
         <div className="buttons">
+        <h2>Precio Total: {precioTotal().toLocaleString('es-ES')}</h2>
           <button className="button-cart" onClick={vaciarCarrito}>
-            <LiaTrashAlt size={40} color="red" />
-            <p>Vaciar Carrito</p>
+          <BiSolidTrash className='iconoEliminarCarrito2' size={20} color="92c7ff" />
+            <p>Vaciar el Carrito</p>
           </button>
           <Link className="button-cart" to="/checkout">
-            Seguir con mi compra
+            Continuar con la compra
           </Link>
         </div>
       </div>
