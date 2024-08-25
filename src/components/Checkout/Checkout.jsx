@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 import { Timestamp, addDoc, collection } from 'firebase/firestore';
 import FormularioCheckout from './FormularioCheckout';
@@ -16,8 +16,8 @@ const Checkout = () => {
     email: '',
   });
   const [idOrden, setIdOrden] = useState(null);
-  const { carrito, precioTotal, clearCart } = useContext(CartContext); // Asegúrate de tener clearCart en tu contexto
-  const navigate = useNavigate(); // Inicializa useNavigate
+  const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
+  const navigate = useNavigate();
 
   const handleChangeInput = (event) => {
     setDatosForm({ ...datosForm, [event.target.name]: event.target.value });
@@ -46,23 +46,24 @@ const Checkout = () => {
       const ordenesRef = collection(db, 'ordenes');
       const ordenDb = await addDoc(ordenesRef, orden);
       setIdOrden(ordenDb.id);
-      clearCart(); // Limpiar el carrito después de que la orden sea exitosa
+      vaciarCarrito(); // Vaciar el carrito después de que la orden sea exitosa
     } catch (error) {
       console.log(error);
+      toast.error('Hubo un problema al procesar la orden. Por favor, inténtelo de nuevo.');
     }
   };
 
   const handleVolver = () => {
-    window.location.href = '/'; // Redirige a la página principal y recarga la página
+    navigate('/'); // Usa navigate en lugar de window.location.href para mantener la navegación en SPA
   };
   
   return (
     <div className="checkout">
       {idOrden ? (
         <div className="order-completed">
-          <h2>Orden completada correctamente! ✔️​</h2>
+          <h2>Orden completada correctamente! </h2>
           <p>Guarde el id de su orden generada: {idOrden}</p>
-          <button className='butoon1' onClick={handleVolver}>Volver al Inicio</button> {/* Botón para volver */}
+          <button className='butoon1' onClick={handleVolver}>Volver al Inicio</button>
         </div>
       ) : (
         <FormularioCheckout
